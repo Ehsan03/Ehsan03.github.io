@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maths.css">
+    <title>Maths Game</title>
+</head>
+<body>
+    <center>
+    <h2>Maths Game</h2>
+  
+
+    <div id="highScore">High Score: 0</div>
+    <div id="currentScore">Current Score: 0</div>
+    <br>
+    <button id="startBtn" onclick="startGame()">START</button>
+    <div id="timeDisplay" hidden>Time left: 30</div>
+    <br>
+    
+    <br>
+    <div class="big" id="operation">0 * 0</div>
+    <br>
+    <button onclick="checkAnswer(1)" id="btn1">0</button>
+
+    <button onclick="checkAnswer(2)" id="btn2">0</button>
+
+    <button onclick="checkAnswer(3)" id="btn3">0</button>
+
+    <button onclick="checkAnswer(4)" id="btn4">0</button>
+    </center>
+<script src="maths.js"></script>
+
+</body>
+</html>
