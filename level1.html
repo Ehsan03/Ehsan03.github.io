@@ -37,7 +37,7 @@ let highScore = 0
 let correctAnswer = 0
 
 var claps = new Audio('claps.mp3');
-claps.play();
+
     
     window.onload = function()
     {
@@ -64,7 +64,7 @@ claps.play();
                 if (timeLeft == 0)
                 {
                     claps.play();
-					var gameTimer=setTimeout("claps.pause()", 1000);
+			("claps.pause()", 1000);
                     clearInterval(timerInterval);
                     window.location.reload(false);
                     document.getElementById("btn1").disabled = true;
