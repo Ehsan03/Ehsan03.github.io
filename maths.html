@@ -106,6 +106,7 @@ var claps = new Audio('claps.mp3');
         let answer = document.getElementById("btn" + buttonIndex).innerHTML;
         if (answer == correctAnswer) score += 1;
 	    claps.play(); 
+	    claps.pause();
 			
         document.getElementById("currentScore").innerHTML = "Current Score: " + score;
         if (score > highScore) highScore = score;
@@ -114,7 +115,7 @@ var claps = new Audio('claps.mp3');
         nextQuestion();
 	   
     }
-	 claps.pause();
+	
 </script>
 <style>
 body {
