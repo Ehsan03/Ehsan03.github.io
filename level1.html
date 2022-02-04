@@ -63,8 +63,7 @@ var claps = new Audio('claps.mp3');
                 timeDisplay.innerHTML = "Time Left: " + timeLeft;
                 if (timeLeft == 0)
                 {
-                    claps.play();
-			("claps.pause()", 1000);
+                    
                     clearInterval(timerInterval);
                     window.location.reload(false);
                     document.getElementById("btn1").disabled = true;
@@ -105,6 +104,8 @@ var claps = new Audio('claps.mp3');
     {
         let answer = document.getElementById("btn" + buttonIndex).innerHTML;
         if (answer == correctAnswer) score += 1;
+	    claps.play();
+			("claps.pause()", 1000);
         document.getElementById("currentScore").innerHTML = "Current Score: " + score;
         if (score > highScore) highScore = score;
         localStorage.setItem("highScore",highScore);
