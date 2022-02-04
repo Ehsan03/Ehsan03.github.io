@@ -65,7 +65,7 @@ var claps = new Audio('claps.mp3');
                 if (timeLeft == 0)
                 {
                     claps.play();
-					var gameTimer=setTimeout("claps.pause()", 1000);
+		    ("claps.pause()", 1000);
                     clearInterval(timerInterval);
                     window.location.reload(false);
                     document.getElementById("btn1").disabled = true;
