@@ -37,7 +37,8 @@ let score = 0
 let highScore = 0
 let correctAnswer = 0
 
-var claps = new Audio('claps.mp3');
+var win = new Audio('audio-w.wav');
+var loss = new Audio('audio-l.wav');
 
 
     window.onload = function()
@@ -105,15 +106,30 @@ var claps = new Audio('claps.mp3');
     {
         let answer = document.getElementById("btn" + buttonIndex).innerHTML;
         if (answer == correctAnswer) score += 1;
+	    
+	    win.play();
+                    var gameTimer=setTimeout("audio-w.pause()", 1000);
+
+        function stopAllAudio(){
+	        allAudios.forEach(function(audio){
+		        audio.pause();
+	        });
+    }
+
+        if (answer != correctAnswer)
+        stopAllAudio();
+        loss.play();
+        var gameTimer=setTimeout("audio-l.pause()", 1000);
+
+        if (audio-l > audio-w)
+		
         document.getElementById("currentScore").innerHTML = "Current Score: " + score;
         if (score > highScore) highScore = score;
         localStorage.setItem("highScore",highScore);
         document.getElementById("highScore").innerHTML = "High Score: " + highScore;
 	    
-	    claps.play(); 
-	    
         nextQuestion();
-	   claps.pause();
+	   
     }
 	
 </script>
