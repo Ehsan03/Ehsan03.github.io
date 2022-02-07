@@ -109,14 +109,8 @@ var loss = new Audio('audio-l.wav');
 	    win.play();
                     var gameTimer=setTimeout("audio-w.pause()", 1000);
 
-        function stopAllAudio(){
-	        allAudios.forEach(function(audio){
-		        audio.pause();
-	        });
-    }
 
         if (answer != correctAnswer)
-        stopAllAudio();
         loss.play();
         var gameTimer=setTimeout("audio-l.pause()", 1000);
 
