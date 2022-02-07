@@ -37,10 +37,11 @@ let score = 0
 let highScore = 0
 let correctAnswer = 0
 
+//audio file global variables 
 var win = new Audio('audio-w.wav');
 var loss = new Audio('audio-l.wav');
 
-
+//saves players highscore 
     window.onload = function()
     {
         let scoreFromBrowser = localStorage.getItem("highScore");
@@ -49,7 +50,7 @@ var loss = new Audio('audio-l.wav');
 
     }
 
-
+//start game function, working timer 
         function startGame()
         {
             nextQuestion();
@@ -76,6 +77,7 @@ var loss = new Audio('audio-l.wav');
             },1000)
         }
 
+//asks another question 
         function nextQuestion()
         {
             let operationDiv = document.getElementById("operation");
@@ -102,6 +104,8 @@ var loss = new Audio('audio-l.wav');
 
     }
 
+//checks if answer is equal to correct answer
+//plays audio and pauses after 1 second 
     function checkAnswer(buttonIndex)
     {
         let answer = document.getElementById("btn" + buttonIndex).innerHTML;
